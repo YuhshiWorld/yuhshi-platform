@@ -4,6 +4,7 @@
  */
 import { bestTextOn, contrastRatio, maxFontScale, touchTarget, type ColorTheme } from '@yuhshi/tokens';
 import type { IconName } from '@yuhshi/icons';
+import type { SyncState } from '@yuhshi/contracts';
 
 // ---------- Buttons ----------
 
@@ -43,7 +44,7 @@ export function buttonContrast(c: ColorTheme, variant: ButtonVariant): number {
 
 // ---------- Sync status (honest statuses, postcard language E7) ----------
 
-export type SyncState = 'saved-locally' | 'on-its-way' | 'submitted' | 'delivered' | 'failed' | 'needs-attention';
+export type { SyncState };
 export type StatusTone = 'neutral' | 'info' | 'success' | 'error' | 'warning';
 
 export interface SyncSpec {

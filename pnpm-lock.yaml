@@ -40,7 +40,20 @@ importers:
         version: 7.0.2
       vitest:
         specifier: 5.1.2
-        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1)(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
+        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1(@noble/hashes@2.4.0))(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
+
+  packages/contracts:
+    dependencies:
+      '@noble/hashes':
+        specifier: 2.4.0
+        version: 2.4.0
+    devDependencies:
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+      vitest:
+        specifier: 5.1.2
+        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1(@noble/hashes@2.4.0))(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
 
   packages/geo:
     devDependencies:
@@ -49,7 +62,7 @@ importers:
         version: 7.0.2
       vitest:
         specifier: 5.1.2
-        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1)(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
+        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1(@noble/hashes@2.4.0))(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
 
   packages/icons:
     devDependencies:
@@ -58,7 +71,7 @@ importers:
         version: 7.0.2
       vitest:
         specifier: 5.1.2
-        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1)(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
+        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1(@noble/hashes@2.4.0))(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
 
   packages/tokens:
     devDependencies:
@@ -70,10 +83,13 @@ importers:
         version: 7.0.2
       vitest:
         specifier: ^5.1.2
-        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1)(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
+        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1(@noble/hashes@2.4.0))(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
 
   packages/ui:
     dependencies:
+      '@yuhshi/contracts':
+        specifier: workspace:*
+        version: link:../contracts
       '@yuhshi/icons':
         specifier: workspace:*
         version: link:../icons
@@ -95,7 +111,7 @@ importers:
         version: 19.3.3
       jsdom:
         specifier: ^31.0.1
-        version: 31.0.1
+        version: 31.0.1(@noble/hashes@2.4.0)
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -116,7 +132,7 @@ importers:
         version: 7.0.2
       vitest:
         specifier: 5.1.2
-        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1)(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
+        version: 5.1.2(@types/node@26.6.11)(jsdom@31.0.1(@noble/hashes@2.4.0))(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
 
 packages:
 
@@ -589,6 +605,10 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
+
+  '@noble/hashes@2.4.0':
+    resolution: {integrity: sha512-X5XaVWZIBCT7HHZGm5I7ZQXDwLG+bGXuSrMQAW+7Zvl87h1kmc1ZB1VSRJcpUfoUrGQp4Fkoxm5kZ+Ms+aW+eA==}
+    engines: {node: '>= 20.19.0'}
 
   '@oxc-project/types@0.160.0':
     resolution: {integrity: sha512-gw4k9syEmnckbOgw2A2FU1TBDdX9hfwV9jEn/uio65pguPzwWiXQS3OIJDMEhv9m06tj9XiEe6RoD0YA+LgreA==}
@@ -2299,7 +2319,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@exodus/bytes@1.16.0': {}
+  '@exodus/bytes@1.16.0(@noble/hashes@2.4.0)':
+    optionalDependencies:
+      '@noble/hashes': 2.4.0
 
   '@expo-google-fonts/figtree@0.4.1': {}
 
@@ -2474,6 +2496,8 @@ snapshots:
 
   '@next/swc-win32-x64-msvc@16.4.6':
     optional: true
+
+  '@noble/hashes@2.4.0': {}
 
   '@oxc-project/types@0.160.0': {}
 
@@ -2866,10 +2890,10 @@ snapshots:
 
   csstype@3.2.4: {}
 
-  data-urls@8.0.0:
+  data-urls@8.0.0(@noble/hashes@2.4.0):
     dependencies:
       whatwg-mimetype: 5.0.0
-      whatwg-url: 17.3.0
+      whatwg-url: 17.3.0(@noble/hashes@2.4.0)
     transitivePeerDependencies:
       - '@noble/hashes'
 
@@ -3041,9 +3065,9 @@ snapshots:
 
   hermes-compiler@260318099.0.5: {}
 
-  html-encoding-sniffer@7.0.0:
+  html-encoding-sniffer@7.0.0(@noble/hashes@2.4.0):
     dependencies:
-      '@exodus/bytes': 1.16.0
+      '@exodus/bytes': 1.16.0(@noble/hashes@2.4.0)
     transitivePeerDependencies:
       - '@noble/hashes'
 
@@ -3126,14 +3150,14 @@ snapshots:
 
   jsc-safe-url@0.2.4: {}
 
-  jsdom@31.0.1:
+  jsdom@31.0.1(@noble/hashes@2.4.0):
     dependencies:
-      '@exodus/bytes': 1.16.0
+      '@exodus/bytes': 1.16.0(@noble/hashes@2.4.0)
       bcp-47: 2.1.2
       bcp-47-match: 2.0.3
-      data-urls: 8.0.0
+      data-urls: 8.0.0(@noble/hashes@2.4.0)
       decimal.js: 10.6.0
-      html-encoding-sniffer: 7.0.0
+      html-encoding-sniffer: 7.0.0(@noble/hashes@2.4.0)
       is-potential-custom-element-name: 1.0.1
       lru-cache: 11.5.3
       parse5: 8.1.1
@@ -3144,7 +3168,7 @@ snapshots:
       w3c-xmlserializer: 6.0.0
       webidl-conversions: 8.0.1
       whatwg-mimetype: 5.0.0
-      whatwg-url: 17.3.0
+      whatwg-url: 17.3.0(@noble/hashes@2.4.0)
       xml-name-validator: 5.0.0
     transitivePeerDependencies:
       - '@noble/hashes'
@@ -3880,7 +3904,7 @@ snapshots:
       terser: 5.51.4
       tsx: 4.23.15
 
-  vitest@5.1.2(@types/node@26.6.11)(jsdom@31.0.1)(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15)):
+  vitest@5.1.2(@types/node@26.6.11)(jsdom@31.0.1(@noble/hashes@2.4.0))(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15)):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/mocker': 5.1.2(vite@8.4.0(@types/node@26.6.11)(esbuild@0.28.2)(terser@5.51.4)(tsx@4.23.15))
@@ -3898,7 +3922,7 @@ snapshots:
       why-is-node-running: 3.2.1
     optionalDependencies:
       '@types/node': 26.6.11
-      jsdom: 31.0.1
+      jsdom: 31.0.1(@noble/hashes@2.4.0)
     transitivePeerDependencies:
       - msw
 
@@ -3916,9 +3940,9 @@ snapshots:
 
   whatwg-mimetype@5.0.0: {}
 
-  whatwg-url@17.3.0:
+  whatwg-url@17.3.0(@noble/hashes@2.4.0):
     dependencies:
-      '@exodus/bytes': 1.16.0
+      '@exodus/bytes': 1.16.0(@noble/hashes@2.4.0)
       tr46: 7.0.0
       webidl-conversions: 8.0.1
     transitivePeerDependencies:
