@@ -1,0 +1,29 @@
+{
+  "name": "@yuhshi/tokens",
+  "version": "0.1.0",
+  "description": "Yuhshi design tokens: Human Spectrum color, Figtree + Noto typography, Fusion gradients. Source of truth: Yuhshi Master Blueprint Parts XV–XVI.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens.json": "./dist/tokens.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsx scripts/build.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.2"
+  }
+}
