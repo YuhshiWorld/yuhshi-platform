@@ -12,7 +12,7 @@ Monorepo for the Yuhshi human exchange network. The Yuhshi Master Blueprint (Con
 | `services/` | `api` (modular-monolith backend), workers |
 | `packages/` | Shared code: `tokens`, `ui`, `i18n`, `sync`, `types` |
 
-Only `packages/tokens` exists so far.
+Built so far: `packages/tokens` (design tokens) and `packages/ui` (component library v0.1).
 
 ## Rules for every contributor and Claude session
 

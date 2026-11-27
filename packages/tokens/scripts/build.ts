@@ -7,7 +7,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   brand, fusion, gradients, toCssGradient, themes, typography, fontFamily, type ColorTheme,
-} from '../src/index.js';
+  space, radius, touchTarget, iconSize, borderWidth, motion,
+} from '../src/index';
 
 const out = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist');
 mkdirSync(out, { recursive: true });
@@ -30,6 +31,10 @@ const staticVars: string[] = [
   ...Object.entries(brand).map(([k, v]) => `  --yh-${kebab(k)}: ${v};`),
   ...Object.entries(fusion).map(([k, v]) => `  --yh-fusion-${k}: ${v};`),
   ...Object.entries(gradients).map(([k, g]) => `  --yh-gradient-${kebab(k)}: ${toCssGradient(g)};`),
+  ...Object.entries(space).map(([k, v]) => `  --yh-space-${k}: ${v / 16}rem;`),
+  ...Object.entries(radius).map(([k, v]) => `  --yh-radius-${k}: ${v}px;`),
+  `  --yh-touch-min: ${touchTarget.min}px;`,
+  ...Object.entries(motion).map(([k, v]) => `  --yh-motion-${k}: ${v}ms;`),
   `  --yh-font-primary: ${fontFamily.primary.map((f) => (f.includes(' ') ? `"${f}"` : f)).join(', ')};`,
   ...Object.entries(typography).flatMap(([k, s]) => {
     const n = kebab(k);
@@ -59,5 +64,5 @@ ${themeVars(themes.dark)}
 `;
 
 writeFileSync(join(out, 'tokens.css'), css);
-writeFileSync(join(out, 'tokens.json'), JSON.stringify({ brand, fusion, gradients, themes, typography, fontFamily }, null, 2));
+writeFileSync(join(out, 'tokens.json'), JSON.stringify({ brand, fusion, gradients, themes, typography, fontFamily, space, radius, touchTarget, iconSize, borderWidth, motion }, null, 2));
 console.log(`tokens.css (${css.split('\n').length} lines) and tokens.json written to dist/`);

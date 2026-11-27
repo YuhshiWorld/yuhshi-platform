@@ -79,6 +79,12 @@ export const typography = {
   'message.chat': typeScale.bodyLarge,
   'label.control': typeScale.label,
   'label.navigation': typeScale.label,
+  /**
+   * Button labels. Pending owner review: the locked scale gives label.control 13/500, but
+   * §15.3 sets buttons at weight 600 and 13 px is small for primary touch actions on phones.
+   */
+  'label.button': { fontSize: 16, fontWeight: 600, lineHeight: 1.25 },
+  'label.buttonSmall': { fontSize: 14, fontWeight: 600, lineHeight: 1.25 },
   'meta.timestamp': typeScale.caption,
   'meta.footnote': typeScale.caption,
   'data.value': { fontSize: 16, fontWeight: 600, lineHeight: 1.4, tabularNums: true },
