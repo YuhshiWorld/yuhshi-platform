@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@yuhshi/tokens": "workspace:*",
-    "yuhshi-icons": "github:YuhshiWorld/yuhshi-icons#9d301d3258d9f02f76e835ac43d8b582999f70e0"
+    "@yuhshi/icons": "workspace:*"
   },
   "devDependencies": {
     "@expo-google-fonts/figtree": "^0.4.1",

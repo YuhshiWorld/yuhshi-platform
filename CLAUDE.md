@@ -4,7 +4,7 @@
 2. Work on a branch, never directly on `main`. Open a pull request; `main` only accepts changes whose CI checks pass.
 3. Before opening or merging a pull request, run locally: `pnpm install --frozen-lockfile && pnpm typecheck && pnpm test && pnpm build`. All must pass.
 4. Every new package has `typecheck`, `test` and `build` scripts so CI covers it automatically.
-5. No raw colours or font sizes in components: import from `@yuhshi/tokens`. Icons come from `YuhshiWorld/yuhshi-icons`.
+5. No raw colours or font sizes in components: import from `@yuhshi/tokens`. Icons come from `@yuhshi/icons`, synced from `YuhshiWorld/yuhshi-icons` with `scripts/sync-icons.sh` (never edited by hand).
 6. Offline-first: every user action works offline or shows an honest status. Money and safety decisions run on the server.
 7. Every feature ships with tests, an accessibility check (200% text, screen reader, RTL) and a written safety risk assessment.
 8. After meaningful progress, append a dated entry to the build log's "Session updates".

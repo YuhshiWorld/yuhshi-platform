@@ -1,7 +1,7 @@
 import { I18nManager, View } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import { iconSize } from '@yuhshi/tokens';
-import { icons, iconSvg, type IconName } from 'yuhshi-icons/ui/src/index';
+import { icons, iconSvg, type IconName } from '@yuhshi/icons';
 import { useTheme } from '../theme';
 
 export type { IconName };

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { darkTheme, lightTheme, contrastRatio, touchTarget } from '@yuhshi/tokens';
-import { iconNames } from 'yuhshi-icons/ui/src/index';
+import { iconNames } from '@yuhshi/icons';
 import {
   buttonColors, buttonContrast, buttonHeight, initials, onHue, resolveScheme, syncSpecs, toneTextColor,
   type ButtonVariant, type SyncState,
