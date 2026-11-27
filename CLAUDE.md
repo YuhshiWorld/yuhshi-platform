@@ -9,3 +9,4 @@
 7. Every feature ships with tests, an accessibility check (200% text, screen reader, RTL) and a written safety risk assessment.
 8. After meaningful progress, append a dated entry to the build log's "Session updates".
 9. Living documents: when you add, change or remove a feature, data use, fee or safety tool, update every document it affects in the same pull request or the build log entry (Community Guidelines, Terms, Privacy Policy, safety risk assessment, pricing plan, names register, Master Blueprint). Note in the PR which documents changed, or "none affected".
+10. Improvements during the build (L12): any improvement you realise while building is implemented, in the same pull request or its own. Add a row to the build log's Improvements register (Section 8): what, where (PR, files, documents) and why, and say so in the PR. Improvements that change a locked decision (blueprint, pricing, names, logo, colours, fonts, tagline) go to the owner first.
