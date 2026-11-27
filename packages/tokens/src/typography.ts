@@ -80,8 +80,8 @@ export const typography = {
   'label.control': typeScale.label,
   'label.navigation': typeScale.label,
   /**
-   * Button labels. Pending owner review: the locked scale gives label.control 13/500, but
-   * §15.3 sets buttons at weight 600 and 13 px is small for primary touch actions on phones.
+   * Button labels (owner-approved 2026-11-27): 16/600, small buttons 14/600.
+   * label.control (13/500) stays for other controls such as input labels.
    */
   'label.button': { fontSize: 16, fontWeight: 600, lineHeight: 1.25 },
   'label.buttonSmall': { fontSize: 14, fontWeight: 600, lineHeight: 1.25 },

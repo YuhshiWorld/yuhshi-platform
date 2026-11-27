@@ -1,7 +1,7 @@
 /**
  * Layout tokens: spacing, radii, touch targets, motion.
- * The blueprints do not fix these values; they are engineering defaults
- * (4-point grid) pending owner design review. Components use these names, never raw numbers.
+ * Owner-approved 2026-11-27 (Master Blueprint §16.16): 4-point spacing grid, rounded radii,
+ * 44/48 touch targets, gentle motion. Components use these names, never raw numbers.
  */
 
 /** 4-point spacing scale, in px (web) / dp (native). */
