@@ -17,8 +17,9 @@
     "react-native-svg": ">=15.16.0"
   },
   "dependencies": {
-    "@yuhshi/tokens": "workspace:*",
-    "@yuhshi/icons": "workspace:*"
+    "@yuhshi/contracts": "workspace:*",
+    "@yuhshi/icons": "workspace:*",
+    "@yuhshi/tokens": "workspace:*"
   },
   "devDependencies": {
     "@expo-google-fonts/figtree": "^0.4.1",
