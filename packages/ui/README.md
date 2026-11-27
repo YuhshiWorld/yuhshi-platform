@@ -29,5 +29,5 @@ npx vitest run --config preview/vitest.config.ts # regenerate preview/gallery.ht
 ## Notes
 
 - Fonts: apps load Figtree with `@expo-google-fonts/figtree`; family names are in `src/fonts.ts`.
-- Button labels use `label.button` (16/600) and `label.buttonSmall` (14/600), engineering defaults pending owner review (the locked `label.control` is 13/500).
-- Spacing, radii, touch targets and motion come from `@yuhshi/tokens` layout tokens, also engineering defaults pending owner review.
+- Button labels use `label.button` (16/600) and `label.buttonSmall` (14/600), owner-approved 2026-11-27; `label.control` (13/500) stays for input labels and other controls.
+- Spacing, radii, touch targets and motion come from `@yuhshi/tokens` layout tokens, owner-approved 2026-11-27 (Master Blueprint §16.16).
