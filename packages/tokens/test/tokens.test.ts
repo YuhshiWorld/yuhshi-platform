@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   AA, bestTextOn, brand, contrastRatio, darkTheme, lightTheme, textSafe, typography, typeScale,
   type ColorTheme,
-} from '../src/index.js';
+} from '../src/index';
 
 const surfaces = (t: ColorTheme) => [t.background.main, t.background.secondary, t.background.card];
 
@@ -81,5 +81,20 @@ describe('personal hue support (E2)', () => {
     for (const hue of ['#5141D7', '#20C6B2', '#F5B942', '#FF705E', '#4389F5', '#7860E8']) {
       expect(contrastRatio(bestTextOn(hue), hue)).toBeGreaterThanOrEqual(4.5);
     }
+  });
+});
+
+describe('layout tokens', () => {
+  it('spacing is on the 4-point grid (except the 2 px hairline step)', async () => {
+    const { space } = await import('../src/index');
+    for (const [k, v] of Object.entries(space)) if (k !== 'xxs') expect(v % 4, k).toBe(0);
+  });
+  it('touch targets are at least 44', async () => {
+    const { touchTarget } = await import('../src/index');
+    expect(touchTarget.min).toBeGreaterThanOrEqual(44);
+  });
+  it('reduced motion means no movement', async () => {
+    const { motion } = await import('../src/index');
+    expect(motion.reduced).toBe(0);
   });
 });

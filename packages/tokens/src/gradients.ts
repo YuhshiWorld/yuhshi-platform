@@ -2,7 +2,7 @@
  * Gradient tokens (§16.4). Reserved for meaningful moments: onboarding, matching,
  * passport milestones, the Fusion Moment (E3), the wordmark i-dot. Never on every button.
  */
-import { brand, fusion } from './color.js';
+import { brand, fusion } from './color';
 
 export interface GradientToken {
   name: string;

@@ -2,7 +2,7 @@
  * Semantic color themes. Components use these roles, never raw hex values.
  * Source: Master Blueprint §15.8, §16.8–16.10.
  */
-import { brand, dark, fusion, neutral, state, text, textSafe } from './color.js';
+import { brand, dark, fusion, neutral, state, text, textSafe } from './color';
 
 export interface ColorTheme {
   name: 'light' | 'dark';
