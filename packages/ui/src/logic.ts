@@ -3,7 +3,7 @@
  * so every rule (contrast, labels, sizes) is unit-tested.
  */
 import { bestTextOn, contrastRatio, maxFontScale, touchTarget, type ColorTheme } from '@yuhshi/tokens';
-import type { IconName } from 'yuhshi-icons/ui/src/index';
+import type { IconName } from '@yuhshi/icons';
 
 // ---------- Buttons ----------
 

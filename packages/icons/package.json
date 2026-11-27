@@ -1,0 +1,19 @@
+{
+  "name": "@yuhshi/icons",
+  "version": "1.0.0",
+  "description": "Yuhshi UI icons, synced from YuhshiWorld/yuhshi-icons (source of truth). Do not edit src/index.ts by hand: run scripts/sync-icons.sh.",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "yuhshiIconsCommit": "d6e15e2cccf9ebcc10593ef9d2036b83b7c10237",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "5.1.2"
+  }
+}
