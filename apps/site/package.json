@@ -1,0 +1,27 @@
+{
+  "name": "@yuhshi/site",
+  "version": "0.1.0",
+  "description": "Yuhshi pre-launch website: homepage, Bring Yuhshi to my country pledge, waitlist.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "build": "next build"
+  },
+  "dependencies": {
+    "@yuhshi/geo": "workspace:*",
+    "@yuhshi/tokens": "workspace:*",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.11",
+    "@types/react": "~19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vitest": "5.1.2"
+  }
+}

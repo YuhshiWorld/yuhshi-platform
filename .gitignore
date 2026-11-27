@@ -4,3 +4,6 @@ dist
 *.log
 .env*
 packages/ui/preview/gallery.html
+.next
+next-env.d.ts.bak
+*.tsbuildinfo
